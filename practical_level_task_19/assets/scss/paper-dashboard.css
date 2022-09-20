@@ -1,0 +1,19 @@
+/* Error: Top-level selectors may not contain the parent selector "&".
+ *    ,
+ * 25 |   &::-moz-placeholder {@content; } // Firefox
+ *    |   ^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   paper-dashboard\mixins\_inputs.scss 25:3  placeholder()
+ *   paper-dashboard\_inputs.scss 1:1          @import
+ *   paper-dashboard.scss 27:9                 root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Top-level selectors may not contain the parent selector "&".\a    \2577 \a 25 \2502    &::-moz-placeholder {@content; } // Firefox\a    \2502    ^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   paper-dashboard\\mixins\\_inputs.scss 25:3  placeholder()\a   paper-dashboard\\_inputs.scss 1:1          @import\a   paper-dashboard.scss 27:9                 root stylesheet';
+}
